@@ -399,7 +399,7 @@
    <function>
     <product>
      <value>0.0625</value>
-     <value>-1000000000.0 </value> <!-- Guess -->
+     <value>-10000000000.0 </value> <!-- Guess -->
      <property>velocities/thetadot-rad_sec</property>
     </product>
    </function>

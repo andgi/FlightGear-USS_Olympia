@@ -98,58 +98,36 @@
 
  <mass_balance>
   <documentation>
-   FIXME!
    Information from ([HAER:1968:USSOlympia])
      Lenght:       344.0 feet
      Beam:          53.0 feet
      Draught:       21.5 feet
      Displacement: Total 5872 tons at a draught of 21 feet 6.8 in.
-     Speed: 
+     Speed:         21.5 kt at full power
   </documentation>
   <documentation>
-    FIXME!
     Rough model to estimate CG and inertia tensor.
 
     % Steiners theorem:
     % Ixx = \bar{Ixx} + m sqrt(\bar{y}^2 + \bar{z}^2)
     % Ixy = \bar{Ixy} + m \bar{x} \bar{y}
 
-    % The hull is a uniform 52.73x12.60x3.00 meter box.
-    % CG in the middle (i.e. at (25.45, 0, -1)) m.
-    m_hull = 0.45359237 * (1172111 - 40000) % KG
-    a = 52.73    % m
-    b = 12.60    % m
-    c = 3.0      % m
+    % The hull is a uniform 105xx meter box.
+    % CG in the middle (i.e. at (52.50, 0, -2)) m.
+    m_hull = 5166227 % KG
+    a = 105.0    % m
+    b =  17.0    % m
+    c =   8.0    % m
 
     Ixx_hull = 1/12 * m_hull * (b^2 + c^2)
     Iyy_hull = 1/12 * m_hull * (a^2 + c^2)
     Izz_hull = 1/12 * m_hull * (a^2 + b^2)
     Ixy_hull = Ixz_hull = Iyz_hull = 0
 
-    % The turret is a cylindrical shell with a diameter of 21ft and a
-    % height of 9 ft weighing 200000 lbs with CG at (25.45, 0, 2)m in the
-    % structural frame.
-    m_turret = 0.45359237 * 200000 % KG
-    h = 0.3048 * 9 % m
-    r = 0.3048 * 10.5 % m
-    Ixx_turret = 1/2 * m_turret * r^2 + 1/12 * m_turret * h^2 + \
-                 m_turret * sqrt(0^2 + 3^2)
-    Iyy_turret = Ixx_turret
-    Izz_turret = m_turret * r^2
-    Ixy_turret = Ixz_turret = Iyz_turret = 0
-
-
-    Ixx = Ixx_hull + Ixx_turret
-    Iyy = Iyy_hull + Iyy_turret
-    Izz = Izz_hull + Izz_turret
-    Ixy = Ixy_hull + Ixy_turret
-    Ixz = Ixz_hull + Ixz_turret
-    Iyz = Iyz_hull + Iyz_turret
-
   </documentation>
-  <ixx unit="KG*M2"> 8e+07 </ixx> <!-- FIXME -->
-  <iyy unit="KG*M2"> 2e+09 </iyy> <!-- FIXME -->
-  <izz unit="KG*M2"> 1e+09 </izz> <!-- FIXME -->
+  <ixx unit="KG*M2"> 1.5e+8 </ixx>
+  <iyy unit="KG*M2"> 4.8e+9 </iyy>
+  <izz unit="KG*M2"> 4.9e+9 </izz>
   <emptywt unit="KG" > 5166227 </emptywt> <!-- 800000 kg off-loaded. --> 
   <location name="CG" unit="M">
    <x> 52.50 </x>

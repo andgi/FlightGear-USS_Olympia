@@ -211,9 +211,10 @@
                                         ~0.9 according to [Ripper:1909:HE].
                                    -->
       <value>2.5252525e-06</value> <!-- To HP. -->
-      <value>1.0</value>           <!-- Double acting cylinders. -->
+      <value>2.0</value>           <!-- Double acting cylinders. -->
       <property>propulsion/engine[0]/steam-mean-pressure-psi</property>
-      <value>452215</value> <!-- Swept volume per cylinder stroke. [in^3] FAKE -->
+      <value>0.25</value>   <!-- Adjustment since the swept volume is false. -->
+      <value>452215</value> <!-- Swept volume per cylinder stroke. [in^3] -->
       <property>propulsion/engine[0]/engine-rpm</property>
      </product>
      <product>
@@ -233,9 +234,10 @@
                                         ~0.9 according to [Ripper:1909:HE].
                                    -->
       <value>2.5252525e-06</value> <!-- To HP. -->
-      <value>1.0</value>           <!-- Double acting cylinders. -->
+      <value>2.0</value>           <!-- Double acting cylinders. -->
       <property>propulsion/engine[1]/steam-mean-pressure-psi</property>
-      <value>452215</value> <!-- Swept volume per cylinder stroke. [in^3] FAKE -->
+      <value>0.25</value>   <!-- Adjustment since the swept volume is false. -->
+      <value>452215</value> <!-- Swept volume per cylinder stroke. [in^3] -->
       <property>propulsion/engine[1]/engine-rpm</property>
      </product>
      <product>
