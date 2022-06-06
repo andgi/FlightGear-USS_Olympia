@@ -112,7 +112,7 @@
     % Ixx = \bar{Ixx} + m sqrt(\bar{y}^2 + \bar{z}^2)
     % Ixy = \bar{Ixy} + m \bar{x} \bar{y}
 
-    % The hull is a uniform 105xx meter box.
+    % The hull is a uniform 105x17x8 meter box.
     % CG in the middle (i.e. at (52.50, 0, -2)) m.
     m_hull = 5166227 % KG
     a = 105.0    % m

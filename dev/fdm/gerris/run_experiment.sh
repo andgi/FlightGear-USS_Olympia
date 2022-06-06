@@ -13,6 +13,6 @@ BASE=$2
 
 cd ${BASEDIR}
 
-for dir in *; do
+for dir in ${2}*; do
   (cd ${dir}; rm f; gerris3D buoyancy3D.gfs)
 done;
