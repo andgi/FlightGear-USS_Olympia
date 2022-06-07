@@ -14,7 +14,7 @@ HRPX=52.4256
 HRPZ=0.0
 
 # Water level below the HRP [m].
-HAGL=0.0
+HAGL=$3
 
 # Compute actual model offsets.
 XOFFSET=`echo -$HRPX | bc`
